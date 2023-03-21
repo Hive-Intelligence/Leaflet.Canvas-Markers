@@ -367,6 +367,14 @@ function layerFactory(L) {
             this._onHoverListeners.push(listener);
         },
 
+        clearOnClickListeners: function () {
+            this._onClickListeners = [];
+        },
+
+        clearOnHoverListeners: function () {
+            this._onHoverListeners = [];
+        },
+
         _executeListeners: function (event) {
 
             if (!this._markers) return;
