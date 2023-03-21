@@ -367,6 +367,20 @@ function layerFactory(L) {
             this._onHoverListeners.push(listener);
         },
 
+        removeOnClickListener: function (listener) {
+            var index = this._onClickListeners.indexOf(listener);
+            if (index > -1) {
+                this._onClickListeners.splice(index, 1);
+            }
+        },
+
+        removeOnHoverListener: function (listener) {
+            var index = this._onHoverListeners.indexOf(listener);
+            if (index > -1) {
+                this._onHoverListeners.splice(index, 1);
+            }
+        },
+
         clearOnClickListeners: function () {
             this._onClickListeners = [];
         },
